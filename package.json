@@ -1,0 +1,43 @@
+{
+	"name": "has-disposable",
+	"version": "0.0.0-development",
+	"description": "Check if a value implements the Disposable or AsyncDisposable protocol",
+	"license": "MIT",
+	"repository": "mstuart/has-disposable",
+	"funding": "https://github.com/sponsors/mstuart",
+	"author": {
+		"name": "Mark Stuart",
+		"email": "mstuart@users.noreply.github.com",
+		"url": "https://github.com/mstuart"
+	},
+	"type": "module",
+	"exports": {
+		"types": "./index.d.ts",
+		"default": "./index.js"
+	},
+	"sideEffects": false,
+	"engines": {
+		"node": ">=20"
+	},
+	"scripts": {
+		"test": "xo && ava && tsd"
+	},
+	"files": [
+		"index.js",
+		"index.d.ts"
+	],
+	"keywords": [
+		"disposable",
+		"dispose",
+		"symbol",
+		"check",
+		"using",
+		"resource",
+		"cleanup"
+	],
+	"devDependencies": {
+		"ava": "^6",
+		"tsd": "^0.31",
+		"xo": "^0.60"
+	}
+}
