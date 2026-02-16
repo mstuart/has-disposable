@@ -1,7 +1,7 @@
 import test from 'ava';
 import hasDisposable, {hasAsyncDisposable} from './index.js';
 
-// hasDisposable tests
+// HasDisposable tests
 
 test('returns true for object with Symbol.dispose', t => {
 	const resource = {
@@ -56,7 +56,7 @@ test('returns true for object with both Symbol.dispose and Symbol.asyncDispose',
 	t.true(hasDisposable(resource));
 });
 
-// hasAsyncDisposable tests
+// HasAsyncDisposable tests
 
 test('returns true for object with Symbol.asyncDispose', t => {
 	const resource = {
