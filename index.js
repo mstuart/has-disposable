@@ -9,7 +9,7 @@ export default function hasDisposable(value) {
 		return false;
 	}
 
-	return typeof /** @type {any} */ (value)[Symbol.dispose] === 'function';
+	return typeof value[Symbol.dispose] === 'function'; // eslint-disable-line no-use-extend-native/no-use-extend-native
 }
 
 /**
@@ -23,5 +23,5 @@ export function hasAsyncDisposable(value) {
 		return false;
 	}
 
-	return typeof /** @type {any} */ (value)[Symbol.asyncDispose] === 'function';
+	return typeof value[Symbol.asyncDispose] === 'function'; // eslint-disable-line no-use-extend-native/no-use-extend-native
 }
