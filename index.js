@@ -9,7 +9,9 @@ export default function hasDisposable(value) {
 		return false;
 	}
 
-	return typeof value[Symbol.dispose] === 'function'; // eslint-disable-line no-use-extend-native/no-use-extend-native
+	// Symbol.dispose is TC39 Explicit Resource Management (Stage 3+); eslint-plugin-unicorn's allowlist hasn't caught up yet.
+	// eslint-disable-next-line unicorn/no-nonstandard-builtin-properties
+	return typeof value[Symbol.dispose] === 'function';
 }
 
 /**
@@ -23,5 +25,7 @@ export function hasAsyncDisposable(value) {
 		return false;
 	}
 
-	return typeof value[Symbol.asyncDispose] === 'function'; // eslint-disable-line no-use-extend-native/no-use-extend-native
+	// Symbol.asyncDispose is TC39 Explicit Resource Management (Stage 3+); eslint-plugin-unicorn's allowlist hasn't caught up yet.
+	// eslint-disable-next-line unicorn/no-nonstandard-builtin-properties
+	return typeof value[Symbol.asyncDispose] === 'function';
 }
