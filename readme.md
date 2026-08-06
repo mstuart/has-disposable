@@ -5,6 +5,7 @@
 <p align="center"><strong>Check if a value implements the Disposable or AsyncDisposable protocol</strong></p>
 
 <p align="center">
+  <a href="https://github.com/mstuart/has-disposable/actions/workflows/main.yml"><img src="https://github.com/mstuart/has-disposable/actions/workflows/main.yml/badge.svg" alt="CI"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License: MIT"></a>
   <a href="https://www.npmjs.com/package/has-disposable"><img src="https://img.shields.io/npm/v/has-disposable?label=npm" alt="npm"></a>
   <img src="https://img.shields.io/badge/node-%E2%89%A520-339933.svg" alt="Node 20+">
