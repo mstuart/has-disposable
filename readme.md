@@ -51,6 +51,10 @@ hasAsyncDisposable(asyncResource);
 
 ### hasDisposable(value)
 
+Returns `true` when `value[Symbol.dispose]` is a function, including methods
+inherited through the prototype chain. Nullish values return `false`. Primitive
+values can return `true` when their boxed prototype defines the method.
+
 Returns `true` if the value has a `Symbol.dispose` method.
 
 #### value
@@ -60,6 +64,10 @@ Type: `unknown`
 The value to check.
 
 ### hasAsyncDisposable(value)
+
+Returns `true` when `value[Symbol.asyncDispose]` is a function, including
+inherited methods. Nullish values return `false`. Primitive values can return
+`true` when their boxed prototype defines the method.
 
 Returns `true` if the value has a `Symbol.asyncDispose` method.
 
