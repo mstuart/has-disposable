@@ -5,7 +5,10 @@ Check if a value implements the `Disposable` protocol (`Symbol.dispose`).
 @returns {boolean} Whether the value has a `Symbol.dispose` method.
 */
 export default function hasDisposable(value) {
-  if (value === null || value === undefined) {
+  if (
+    value === null ||
+    (typeof value !== "object" && typeof value !== "function")
+  ) {
     return false;
   }
 
@@ -19,7 +22,10 @@ Check if a value implements the `AsyncDisposable` protocol (`Symbol.asyncDispose
 @returns {boolean} Whether the value has a `Symbol.asyncDispose` method.
 */
 export function hasAsyncDisposable(value) {
-  if (value === null || value === undefined) {
+  if (
+    value === null ||
+    (typeof value !== "object" && typeof value !== "function")
+  ) {
     return false;
   }
 
